@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default to: 'ssijbrandij@gmail.com'
+  default to: 'ssijbrandij@gmail.com' # this should really be an ENV var
 
   def contact_email(name, email, body)
     @name = name
