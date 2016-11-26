@@ -49,8 +49,10 @@
     <%= yield %>
 
     <% if Rails.env.development? %>
-      <div class="col-md-6 col-md-offset-3">
-        <%= debug(params) %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= debug(params) %>
+        </div>
       </div>
     <% end %>
   </body>

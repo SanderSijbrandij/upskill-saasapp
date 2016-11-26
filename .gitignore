@@ -22,3 +22,9 @@
 
 # Ignore mental notes
 Requirements.txt
+
+# Ignore environment variables
+/config/local_env.yml
+
+# Ignore application configuration
+/config/application.yml
