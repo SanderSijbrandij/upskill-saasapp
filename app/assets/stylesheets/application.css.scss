@@ -75,6 +75,7 @@ h1, h2, h3 {
 }
 
 // hide devise flash
-.alert-notice {
+.alert-notice,
+.alert-alert {
   display: none;
 }
