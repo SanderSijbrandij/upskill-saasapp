@@ -31,7 +31,7 @@ $(document).on('turbolinks:load', function(){
 
     if (error) {
       // Reset button
-      submitBtn.val("Sign Up").prop('disabled', false);
+      submitBtn.val("Sign up").prop('disabled', false);
     } else {
       // Send information to Stripe
       Stripe.createToken({
