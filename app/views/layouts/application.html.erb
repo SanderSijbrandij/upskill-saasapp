@@ -43,19 +43,11 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-    <div class="container">
+    <div class="container flash-container">
       <% flash.each do |type, message| %>
        <%= content_tag :div, message, class: "alert alert-#{type}" %>
       <% end %>
     </div>
     <%= yield %>
-
-    <% if Rails.env.development? %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <%= debug(params) %>
-        </div>
-      </div>
-    <% end %>
   </body>
 </html>

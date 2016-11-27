@@ -74,8 +74,15 @@ h1, h2, h3 {
   margin-top: 30px;
 }
 
-// hide devise flash
-.alert-notice,
-.alert-alert {
-  display: none;
+// flash styles
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+.alert-alert,
+.alert-notice {
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.5);
+  margin-top: -14px;
 }

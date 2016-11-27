@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   attr_accessor :stripe_card_token
 
+  # save the user with a stripe customer token
   def save_with_subscription
     if valid?
       customer = Stripe::Customer.create(description: email,
