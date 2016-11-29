@@ -1,0 +1,9 @@
+<%= @profile.first_name %>
+<%= @profile.job_title %>
+<br>
+
+<!-- Pro Only -->
+<% if current_user.plan_id == 2 %>
+  <%= @profile.phone_number %><br>
+  <%= @profile.contact_email %>
+<% end %>
