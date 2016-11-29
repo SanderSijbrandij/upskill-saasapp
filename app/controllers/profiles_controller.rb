@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :only_current_user
 
   # GET /users/:user_id/profile/new
   def new
@@ -40,5 +42,10 @@ class ProfilesController < ApplicationController
       params.require(:profile).permit(:first_name, :last_name, :job_title,
                                       :phone_number, :contact_email,
                                       :description, :avatar)
+    end
+
+    def only_current_user
+      @user = User.find(params[:user_id])
+      redirect_to root_url unless @user == current_user
     end
 end
