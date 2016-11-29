@@ -6,4 +6,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @profile = @user.profile
   end
+
+  # GET /users
+  def index
+    @users = User.includes(:profile)
+  end
 end
